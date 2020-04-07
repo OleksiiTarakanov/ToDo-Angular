@@ -1,11 +1,13 @@
 <header [ngClass]="{
     'first': true,
     'second': isLogined
-}">
-    <h1 [ngStyle] = "{
+}" class="container-fluid app-header">
+    <h1 *ngIf="true" [ngStyle] = "{
         'font-size': titleFontSize
     }
-    ">{{title}}</h1>
-    <p [innerHTML]="subName">angular but smaller</p>
-    <button (click) = "login($event)">LogIn</button> 
+    " class="title">{{title}}</h1>
+    <p 
+    [innerHTML]="subName" class="sub-title"></p>
+    <button class="btn btn-warning" (click)="logIn()">Log In</button>
 </header>
+
