@@ -10,12 +10,15 @@
     </div>
     
     <div>
-      <button [disabled]="!todo.description">show/hide ditails</button>
-      <button>delete</button>
+      <button class="btn btn-secondary" [disabled]="!todo.description"
+      (click)="toggleDetails()">show/hide ditails</button>
+      <button class="btn btn-outline-danger">delete</button>
     </div>
   </header>
 
-  <div>
+  <div *ngIf = "isShowDetails">
+    <p class="todo-description" *ngIf = "todo.description">
     {{todo.description}}
+    </p>
   </div>
 </li>

@@ -9,7 +9,14 @@ export class AppComponent {
   headerTitle = 'ToDo-angular';
   headerSubTitle = 'Educational project';
   footerTitle = 'Footer'
+  title: string;
+
+
   testOutputApp(event: string): void{
     console.log(event);
+  }
+
+  save(): void{
+    console.log(this.title);
   }
 }

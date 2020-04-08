@@ -1,11 +1,15 @@
 <div class="container app-todos">
-    <ul *ngIf="toDoList">
-        <app-todo-item *ngFor="let item of toDoList" [todo]="item">
-        </app-todo-item>
-        
-    </ul>
 
-    <div class="text-center" *ngIf="!toDoList">
-        No Data.
-    </div>
+  <app-new-todo></app-new-todo>
+  
+  <ul *ngIf="toDoList">
+    <app-todo-item  class = "todo-item"
+                    *ngFor="let item of toDoList" 
+                    [todo]="item">
+    </app-todo-item>
+  </ul>
+
+  <div class="text-center" *ngIf="!toDoList">
+    No Data.
+  </div>
 </div>

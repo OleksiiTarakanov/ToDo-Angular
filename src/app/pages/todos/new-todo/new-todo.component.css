@@ -1,0 +1,25 @@
+form{
+    margin-top: 10px;
+}
+
+.form-style{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.app-new-todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

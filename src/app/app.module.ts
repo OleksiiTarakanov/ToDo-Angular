@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -7,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { TodosComponent } from './pages/todos/todos.component';
 import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
+import { NewTodoComponent } from './pages/todos/new-todo/new-todo.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,13 @@ import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
     FooterComponent,
     MainComponent,
     TodosComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    NewTodoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

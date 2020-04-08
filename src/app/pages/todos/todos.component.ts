@@ -19,7 +19,7 @@ export class TodosComponent implements OnInit {
   getTodos(): void{
     setTimeout(()=>{
       this.toDoList = todos;
-    },5000)
+    },2000)
   }
 }
 
