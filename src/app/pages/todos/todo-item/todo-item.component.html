@@ -4,8 +4,9 @@
       <span class="material-icons">
         {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
       </span>
-      <h5 [class.is-done]="todo.isDone">
-        {{todo.title}}
+      <h5>
+        <span *ngIf = "todo.isDone"><s>{{todo.title}}</s></span>
+        <span *ngIf = "!todo.isDone">{{todo.title}}</span>
       </h5>
     </div>
     

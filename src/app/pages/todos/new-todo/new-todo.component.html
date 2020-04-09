@@ -4,7 +4,11 @@
         (ngSubmit)="onSubmit()">
     <div class="form-group">
       <input class="form-control" 
-             type="text" placeholder="Todo Title" formControlName="title">
+             type="text" 
+             placeholder="Todo Title" 
+             formControlName="title"
+             >
+             
 
       <div *ngIf="newTodoForm.get('title').invalid &&
                   (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)"
