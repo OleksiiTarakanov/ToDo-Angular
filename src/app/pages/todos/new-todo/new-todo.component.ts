@@ -18,8 +18,7 @@ export class NewTodoComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.newTodoForm);
-    // this.newTodoForm.reset();
+    this.newTodoForm.reset();
   }
 
   private createNewTodoForm(): void {
@@ -27,8 +26,8 @@ export class NewTodoComponent implements OnInit {
       title: [
         '',
         [
-        Validators.required,
-        Validators.minLength(3),
+          Validators.required,
+          Validators.minLength(3),
         ]
       ],
       description: [''],

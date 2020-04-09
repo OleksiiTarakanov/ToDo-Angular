@@ -1,33 +1,23 @@
 <div class="app-new-todo">
-  <form class="form-style"
-        [formGroup]="newTodoForm" 
-        (ngSubmit)="onSubmit()">
+  <form class="form-style" [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <input class="form-control" 
-             type="text" 
-             placeholder="Todo Title" 
-             formControlName="title"
-             >
-             
+      <input class="form-control" type="text" placeholder="Todo Title" formControlName="title" [ngClass]=" newTodoForm.get('title').invalid &&
+             (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ? 'is-invalid' : ''">
 
       <div *ngIf="newTodoForm.get('title').invalid &&
-                  (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)"
-                  class="text-danger">
-        <span *ngIf = "newTodoForm.get('title').errors.required">Input is required.</span>
-        <span  *ngIf = "newTodoForm.get('title').errors.minlength">Input min length 3 symbols.</span>
+                  (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)" class="text-danger">
+        <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
+        <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length 3 symbols.</span>
       </div>
     </div>
 
     <div class="form-group">
-      <textarea class="form-control" 
-                rows="3" 
-                placeholder="Todo Description"    formControlName="description">
+      <textarea class="form-control" rows="3" placeholder="Todo Description" formControlName="description">
       </textarea>
     </div>
 
     <footer>
-      <!-- [disabled]="newTodoForm.invalid" -->
-      <button class="btn btn-primary" type="submit" >Save</button>
+      <button (click)="onSubmit()" class="btn btn-primary" type="submit" [disabled]="newTodoForm.invalid">Save</button>
     </footer>
   </form>
 </div>
