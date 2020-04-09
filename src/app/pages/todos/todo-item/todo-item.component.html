@@ -11,7 +11,10 @@
     
     <div>
       <button class="btn btn-secondary" [disabled]="!todo.description"
-      (click)="toggleDetails()">show/hide ditails</button>
+      (click)="toggleDetails()">
+      <span *ngIf = "!isShowDetails">Show details</span>
+      <span *ngIf = "isShowDetails">Hide details</span>
+    </button>
       <button class="btn btn-outline-danger">delete</button>
     </div>
   </header>

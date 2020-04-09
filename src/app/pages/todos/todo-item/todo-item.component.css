@@ -10,18 +10,20 @@ header{
     margin: 5px;
     width: 60%;
 }
+
 div{
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 li{
+    align-items: center;
     border-bottom: 1px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin-left: 35px;
     width: 100%;
 }
