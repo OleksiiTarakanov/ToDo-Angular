@@ -5,11 +5,13 @@
   <ul *ngIf="toDoList">
     <app-todo-item  class = "todo-item"
                     *ngFor="let item of toDoList" 
-                    [todo]="item">
+                    [todo]="item"
+                    (delete)="deleteTodo($event)">
     </app-todo-item>
   </ul>
 
-  <div class="text-center" *ngIf="!toDoList">
-    No Data.
+  <div class="text-center">
+    <span *ngIf="!toDoList">No Data.</span>  
+    <span *ngIf="toDoList.length === 0">Todo list is empty</span>  
   </div>
 </div>

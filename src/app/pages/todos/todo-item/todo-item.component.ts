@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
+
 
 @Component({
   selector: 'app-todo-item',
@@ -8,17 +9,21 @@ import { Todo } from 'src/app/core/interfaces';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
-  
+  @Output() delete = new EventEmitter<number>();
+
   isShowDetails = false;
-  constructor() { 
-    
+  constructor( ) {
+
   }
 
   ngOnInit(): void {
   }
 
-  toggleDetails():void{
-    this.isShowDetails = !this.isShowDetails;
+  deleteTodo(todoId: number): void {
+    this.delete.emit(todoId);
   }
 
+  toggleDetails(): void {
+    this.isShowDetails = !this.isShowDetails;
+  };
 }
