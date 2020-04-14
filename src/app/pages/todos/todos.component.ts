@@ -20,6 +20,13 @@ export class TodosComponent implements OnInit {
     this.getTodos();
   }
 
+  updateTodo(todo: Todo): void {
+    this.todoService.updateTodo(todo)
+    .subscribe(()=>{
+      this.getTodos();
+    });
+  }
+
   deleteTodo(todoId: number):void {
     this.todoService.deleteTodo(todoId)
       .subscribe(() => {
@@ -27,10 +34,18 @@ export class TodosComponent implements OnInit {
       });
   }
 
+  addTodo(todo: Todo): void {
+    this.todoService.addTodo(todo)
+    .subscribe(() => {
+      this.getTodos();
+    });
+  }
+
   private getTodos(): void {
     this.todoService.getTodos()
       .subscribe(data =>{
         this.toDoList = data;
+        console.log(data)
       },
       error => {
         console.error(error);

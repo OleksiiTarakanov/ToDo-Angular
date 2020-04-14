@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Todo } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-new-todo',
@@ -7,7 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./new-todo.component.css']
 })
 export class NewTodoComponent implements OnInit {
+  @Output() newTodo = new EventEmitter<Todo>();
   newTodoForm: FormGroup;
+  isSubmit = false;
 
   constructor(
     private fb: FormBuilder
@@ -17,8 +20,16 @@ export class NewTodoComponent implements OnInit {
     this.createNewTodoForm();
   }
 
+
+
   onSubmit(): void {
+    this.isSubmit = true;
+    
+    this.newTodo.emit(this.newTodoForm.value);
+    
     this.newTodoForm.reset();
+    this.isSubmit = false;
+    
   }
 
   private createNewTodoForm(): void {
@@ -31,6 +42,7 @@ export class NewTodoComponent implements OnInit {
         ]
       ],
       description: [''],
+      isDone: [false]
     });
   }
 }

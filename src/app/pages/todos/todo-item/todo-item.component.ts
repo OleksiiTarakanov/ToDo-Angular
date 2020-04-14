@@ -10,6 +10,7 @@ import { Todo } from 'src/app/core/interfaces';
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   @Output() delete = new EventEmitter<number>();
+  @Output() update = new EventEmitter<Todo>();
 
   isShowDetails = false;
   constructor( ) {
@@ -17,6 +18,11 @@ export class TodoItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggleToDo(): void {
+    this.todo.isDone = !this.todo.isDone;
+    this.update.emit(this.todo);
   }
 
   deleteTodo(todoId: number): void {

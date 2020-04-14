@@ -1,9 +1,9 @@
 <li>
   <header>
     <div>
-      <span class="material-icons">
+      <i class="material-icons" (click)="toggleToDo()">
         {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
-      </span>
+      </i>
       <h5>
         <span *ngIf="todo.isDone"><s>{{todo.title}}</s></span>
         <span *ngIf="!todo.isDone">{{todo.title}}</span>

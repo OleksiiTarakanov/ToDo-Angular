@@ -22,4 +22,12 @@ export class TodoService {
   deleteTodo(todoId: number): Observable<Array<Todo>> {
     return this.http.delete<Array<Todo>>(`${this.url}/${todoId}`);
   }
+
+  updateTodo(todo: Todo) {
+    return this.http.put<Array<Todo>>(`${this.url}/${todo.id}`, todo);
+  }
+
+  addTodo(todo: Todo){
+    return this.http.post<any>(`${this.url}`, todo);
+  }
 }
