@@ -4,7 +4,7 @@
       <i class="material-icons" (click)="toggleToDo()">
         {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
       </i>
-      <h5>
+      <h5 [appHighlight] = '"red"'>
         <span *ngIf="todo.isDone"><s>{{todo.title}}</s></span>
         <span *ngIf="!todo.isDone">{{todo.title}}</span>
       </h5>
@@ -16,7 +16,8 @@
         <span *ngIf="isShowDetails">Hide details</span>
       </button>
       <button class="btn btn-outline-danger" 
-              (click)="deleteTodo(todo.id)">delete</button>
+              (click)="deleteTodo(todo.id)">delete
+      </button>
     </div>
   </header>
 
