@@ -1,7 +1,11 @@
 <div class="app-new-todo">
   <form class="form-style" [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="Todo Title" formControlName="title" [ngClass]=" newTodoForm.get('title').invalid &&
+      <input class="form-control" 
+             type="text" 
+             placeholder="Todo Title" 
+             formControlName="title" 
+             [ngClass]=" newTodoForm.get('title').invalid &&
              (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ? 'is-invalid' : ''">
 
       <div *ngIf="newTodoForm.get('title').invalid &&
