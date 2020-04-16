@@ -15,7 +15,7 @@ export class FilterBySearchPipe implements PipeTransform {
 
     return data.filter(el  => {
       return el.title.toLowerCase().indexOf(search.toLowerCase()) > -1;
-    });;
+    });
   }
 
 }

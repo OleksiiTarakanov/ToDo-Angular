@@ -16,6 +16,7 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
 import { FilterBySearchPipe } from './shared/pipes/fiterBySearch/filter-by-search.pipe';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AboutComponent } from './pages/about/about.component';
+import { FilterBYPriorityPipe } from './shared/pipes/filterByPriority/filter-bypriority.pipe';
 
 
 
@@ -34,7 +35,8 @@ import { AboutComponent } from './pages/about/about.component';
     // FiterBySearchDirective,
     FilterBySearchPipe,
     PageNotFoundComponent,
-    AboutComponent
+    AboutComponent,
+    FilterBYPriorityPipe
   ],
   imports: [
     BrowserModule,

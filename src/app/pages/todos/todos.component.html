@@ -14,20 +14,26 @@
     <div class="group-priority">
       <input type="radio" 
              name="priority" 
-             class="rb-priority">High priority
+             class="rb-priority"
+             value="high"
+             [(ngModel)]="priority">High priority
       <input type="radio" 
              name="priority" 
-             class="rb-priority">Medium priority
+             class="rb-priority"
+             value="medium"
+             [(ngModel)]="priority">Medium priority
       <input type="radio" 
              name="priority" 
-             class="rb-priority">Low priority
+             class="rb-priority"
+             value="low"
+             [(ngModel)]="priority">Low priority
     </div>
   </form>
 
 
   <ul *ngIf="toDoList">
     <app-todo-item  class = "todo-item"
-                    *ngFor= "let item of toDoList | filterBySearch:search" 
+                    *ngFor= "let item of toDoList | filterBySearch:search | filterBYPriority:priority" 
                     [todo]= "item"
                     (delete)= "deleteTodo($event)"
                     (update)= "updateTodo($event)">

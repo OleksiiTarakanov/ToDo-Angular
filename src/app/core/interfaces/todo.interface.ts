@@ -5,5 +5,6 @@ export class Todo {
     isDone: boolean;
     priority: string;
     priorityClass: string;
+  static priority: any;
 }
 
