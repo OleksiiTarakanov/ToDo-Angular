@@ -1,34 +1,52 @@
 {
   "todos": [
     {
-      "id": 1,
       "title": "Angular",
-      "description": null,
-      "isDone": true
+      "description": "Angular description",
+      "isDone": true,
+      "id": 1
     },
     {
-      "id": 2,
       "title": "JavaScript",
-      "description": "Test Desc",
-      "isDone": true
+      "description": "JS desc",
+      "isDone": true,
+      "id": 2
     },
     {
-      "title": "React",
-      "description": "react",
-      "isDone": false,
+      "title": "SCSS",
+      "description": null,
+      "isDone": null,
       "id": 3
     },
     {
-      "title": "jquery",
-      "description": "$(description)",
-      "isDone": false,
+      "title": "CSS",
+      "description": null,
+      "isDone": null,
       "id": 4
     },
     {
-      "title": "new todo",
-      "description": "new todo desc",
+      "title": "JS array",
+      "description": null,
       "isDone": null,
       "id": 5
+    },
+    {
+      "title": "TS types",
+      "description": null,
+      "isDone": null,
+      "id": 6
+    },
+    {
+      "title": "123",
+      "description": "123",
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "title": "Angular CLI",
+      "description": "CLI",
+      "isDone": null,
+      "id": 8
     }
   ]
 }

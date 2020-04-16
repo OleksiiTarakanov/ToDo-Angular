@@ -9,6 +9,7 @@ import { TodoService } from 'src/app/core/services/todo/todo.service';
 })
 export class TodosComponent implements OnInit {
   toDoList: Array<Todo>;
+  search: string;
 
   constructor(
     private todoService: TodoService

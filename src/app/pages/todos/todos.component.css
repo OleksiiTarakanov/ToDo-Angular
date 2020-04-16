@@ -10,3 +10,21 @@ ul{
     justify-content: center;
 }
 
+form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rb-priority{
+    margin-left: 15px;
+}
+
+
+.form-group{
+    width: 90%;
+}
+

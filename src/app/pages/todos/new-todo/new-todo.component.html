@@ -16,12 +16,19 @@
     </div>
 
     <div class="form-group">
-      <textarea class="form-control" rows="3" placeholder="Todo Description" formControlName="description">
+      <textarea class="form-control" 
+                rows="3" 
+                placeholder="Todo Description" 
+                formControlName="description">
       </textarea>
     </div>
 
     <footer>
-      <button (click)="onSubmit()" class="btn btn-primary" type="submit" [disabled]="newTodoForm.invalid">Save</button>
+      <button (click)="onSubmit()" 
+              class="btn btn-primary" 
+              type="submit" 
+              [disabled]="newTodoForm.invalid">Save
+      </button>
     </footer>
   </form>
 </div>

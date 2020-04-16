@@ -1,6 +1,22 @@
 <app-header [title]="headerTitle" [subTitle]="headerSubTitle" (testOutput)="testOutputApp($event)">
 </app-header>
-<app-todos></app-todos>
+
+<nav class="navbar navbar-dark bg-dark app-navbar">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link"
+         href="toDoList">Todos</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link"
+         href="about">About</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
 
 
 <app-main></app-main>
@@ -8,4 +24,3 @@
 <app-footer>
   <h1>FOOTER</h1>
 </app-footer>
-

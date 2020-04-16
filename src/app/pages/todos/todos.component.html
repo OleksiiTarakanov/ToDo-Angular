@@ -2,9 +2,32 @@
 
   <app-new-todo (newTodo)="addTodo($event)"></app-new-todo>
   
+  <form>
+    <div class="form-group">
+      <input class="form-control"
+             name="search"
+             type="text"
+             placeholder="Search..."
+             autocomplete="off"
+             [(ngModel)]="search" >
+    </div>
+    <div class="group-priority">
+      <input type="radio" 
+             name="priority" 
+             class="rb-priority">High priority
+      <input type="radio" 
+             name="priority" 
+             class="rb-priority">Medium priority
+      <input type="radio" 
+             name="priority" 
+             class="rb-priority">Low priority
+    </div>
+  </form>
+
+
   <ul *ngIf="toDoList">
     <app-todo-item  class = "todo-item"
-                    *ngFor= "let item of toDoList" 
+                    *ngFor= "let item of toDoList | filterBySearch:search" 
                     [todo]= "item"
                     (delete)= "deleteTodo($event)"
                     (update)= "updateTodo($event)">
