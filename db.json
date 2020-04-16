@@ -4,49 +4,65 @@
       "title": "Angular",
       "description": "Angular description",
       "isDone": true,
-      "id": 1
+      "id": 1,
+      "priority": "high",
+      "priorityClass": ""
     },
     {
       "title": "JavaScript",
       "description": "JS desc",
       "isDone": true,
-      "id": 2
+      "id": 2,
+      "priority": "high",
+      "priorityClass" : ""
     },
     {
       "title": "SCSS",
       "description": null,
       "isDone": null,
-      "id": 3
+      "id": 3,
+      "priority": "medium",
+      "priorityClass" : ""
     },
     {
       "title": "CSS",
       "description": null,
       "isDone": null,
-      "id": 4
+      "id": 4,
+      "priority": "medium",
+      "priorityClass" : ""
     },
     {
       "title": "JS array",
       "description": null,
       "isDone": null,
-      "id": 5
+      "id": 5,
+      "priority": "medium",
+      "priorityClass" : ""
     },
     {
       "title": "TS types",
       "description": null,
       "isDone": null,
-      "id": 6
+      "id": 6,
+      "priority": "high",
+      "priorityClass" : ""
     },
     {
       "title": "123",
       "description": "123",
       "isDone": false,
-      "id": 7
+      "id": 7,
+      "priority": "low",
+      "priorityClass" : ""
     },
     {
       "title": "Angular CLI",
       "description": "CLI",
-      "isDone": null,
-      "id": 8
+      "isDone": true,
+      "id": 8,
+      "priority": "low",
+      "priorityClass" : ""
     }
   ]
 }

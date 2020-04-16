@@ -26,3 +26,7 @@ footer{
     flex-direction: row;
     justify-content: flex-end;
 }
+
+.tr{
+    margin-left: 30px;
+}
