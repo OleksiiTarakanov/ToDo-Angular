@@ -17,6 +17,9 @@ import { FilterBySearchPipe } from './shared/pipes/fiterBySearch/filter-by-searc
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FilterBYPriorityPipe } from './shared/pipes/filterByPriority/filter-bypriority.pipe';
+import { AboutProjectsComponent } from './pages/about/about-projects/about-projects.component';
+import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+import { UserComponent } from './pages/about/user/user.component';
 
 
 
@@ -36,7 +39,10 @@ import { FilterBYPriorityPipe } from './shared/pipes/filterByPriority/filter-byp
     FilterBySearchPipe,
     PageNotFoundComponent,
     AboutComponent,
-    FilterBYPriorityPipe
+    FilterBYPriorityPipe,
+    AboutProjectsComponent,
+    AboutUsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -12,21 +12,30 @@
              [(ngModel)]="search" >
     </div>
     <div class="group-priority">
-      <input type="radio" 
+      <input 
+             type="radio" 
              name="priority" 
              class="rb-priority"
              value="high"
              [(ngModel)]="priority">High priority
-      <input type="radio" 
+      <input 
+             type="radio" 
              name="priority" 
              class="rb-priority"
              value="medium"
              [(ngModel)]="priority">Medium priority
-      <input type="radio" 
+      <input 
+             type="radio" 
              name="priority" 
              class="rb-priority"
              value="low"
              [(ngModel)]="priority">Low priority
+      <input 
+             type="radio" 
+             name="priority" 
+             class="rb-priority"
+             value=""
+             [(ngModel)]="priority">All
     </div>
   </form>
 

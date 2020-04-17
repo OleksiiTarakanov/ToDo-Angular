@@ -4,7 +4,5 @@ export class Todo {
     description: string;
     isDone: boolean;
     priority: string;
-    priorityClass: string;
-  static priority: any;
 }
 
