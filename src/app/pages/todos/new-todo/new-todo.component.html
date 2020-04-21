@@ -27,16 +27,24 @@
       <input type="radio" 
              class="tr" 
              name="priority"  
+             formControlName="priority"  
              value="high">High priority
       <input type="radio" 
              class="tr" 
-             name="priority"  
+             name="priority" 
+             formControlName="priority"  
              value="medium">Medium priority
       <input type="radio" 
              class="tr" 
+             formControlName="priority" 
              name="priority" 
              value="low">Low priority
+      <div *ngIf="!newTodoForm.get('priority').dirty" class="text-danger prior-danger">
+        <span>Choosing priority is required</span>
+      </div>
     </div>
+    
+
 
     <footer>
       <button (click)="onSubmit()" 

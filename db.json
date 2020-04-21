@@ -27,7 +27,7 @@
     {
       "title": "CSS",
       "description": null,
-      "isDone": null,
+      "isDone": true,
       "id": 4,
       "priority": "medium",
       "priorityClass": ""
@@ -63,6 +63,20 @@
       "id": 8,
       "priority": "low",
       "priorityClass": ""
+    },
+    {
+      "title": "123",
+      "description": "123123",
+      "isDone": false,
+      "priority": "high",
+      "id": 9
+    },
+    {
+      "title": "new todo with priority",
+      "description": "desc",
+      "isDone": false,
+      "priority": "low",
+      "id": 10
     }
   ]
 }

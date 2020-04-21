@@ -18,7 +18,7 @@ export class NewTodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.createNewTodoForm();
-  }
+  } 
 
 
 
@@ -26,6 +26,7 @@ export class NewTodoComponent implements OnInit {
     this.isSubmit = true;
     
     this.newTodo.emit(this.newTodoForm.value);
+    console.log(this.newTodoForm.value);
     
     this.newTodoForm.reset();
     this.isSubmit = false;
@@ -42,7 +43,11 @@ export class NewTodoComponent implements OnInit {
         ]
       ],
       description: [''],
-      isDone: [false]
+      isDone: [false],
+      priority: [
+        '',
+        Validators.required
+      ]
     });
   }
 }
