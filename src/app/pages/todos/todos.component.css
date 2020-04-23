@@ -28,3 +28,14 @@ form{
     width: 90%;
 }
 
+.create{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-create{
+    margin-top: 50px;
+    width: 90%;
+}
+

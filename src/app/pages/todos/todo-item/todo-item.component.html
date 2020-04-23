@@ -16,8 +16,13 @@
         <span *ngIf="!isShowDetails">Show details</span>
         <span *ngIf="isShowDetails">Hide details</span>
       </button>
+
+      <button class="btn btn-outline-warning"
+              (click)="editTodo()">Edit
+      </button>
+
       <button class="btn btn-outline-danger" 
-              (click)="deleteTodo(todo.id)">delete
+              (click)="deleteTodo(todo.id)">Delete
       </button>
     </div>
   </header>

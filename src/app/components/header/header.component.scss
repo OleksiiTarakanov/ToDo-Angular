@@ -13,3 +13,12 @@ header{
     background-color:#343a40;
     color: #fff;
 }
+
+@media screen and (max-width: 1024px){
+    header{
+        width: 100%;
+    }
+    .app-header{
+        width: 100%;
+    }
+}

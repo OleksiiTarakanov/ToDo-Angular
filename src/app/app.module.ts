@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,6 +22,8 @@ import { FilterBYPriorityPipe } from './shared/pipes/filterByPriority/filter-byp
 import { AboutProjectsComponent } from './pages/about/about-projects/about-projects.component';
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { UserComponent } from './pages/about/user/user.component';
+
+
 
 
 
@@ -49,7 +53,12 @@ import { UserComponent } from './pages/about/user/user.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot(),
+  
+  ],
+  entryComponents:[
+    NewTodoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

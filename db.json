@@ -1,12 +1,11 @@
 {
   "todos": [
     {
-      "title": "Angular",
-      "description": "Angular description",
-      "isDone": true,
       "id": 1,
-      "priority": "high",
-      "priorityClass": ""
+      "title": "Angular",
+      "description": "Angular desc.",
+      "isDone": true,
+      "priority": "high"
     },
     {
       "title": "JavaScript",
@@ -57,26 +56,17 @@
       "priorityClass": ""
     },
     {
-      "title": "Angular CLI",
-      "description": "CLI",
-      "isDone": true,
       "id": 8,
-      "priority": "low",
-      "priorityClass": ""
+      "title": "Edited todo",
+      "description": "Edited Desc",
+      "isDone": false,
+      "priority": "low"
     },
     {
-      "title": "123",
-      "description": "123123",
+      "id": 9,
+      "title": "sdfgh",
       "isDone": false,
-      "priority": "high",
-      "id": 9
-    },
-    {
-      "title": "new todo with priority",
-      "description": "desc",
-      "isDone": false,
-      "priority": "low",
-      "id": 10
+      "priority": "low"
     }
   ]
 }

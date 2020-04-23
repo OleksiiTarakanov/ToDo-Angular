@@ -1,0 +1,9 @@
+.col{
+    margin-top: 20px;
+    max-width: 280px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

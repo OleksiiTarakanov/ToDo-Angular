@@ -1,57 +1,41 @@
-<div class="app-new-todo">
-  <form class="form-style" [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <input class="form-control" 
-             type="text" 
-             placeholder="Todo Title" 
-             formControlName="title" 
-             [ngClass]=" newTodoForm.get('title').invalid &&
-             (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ? 'is-invalid' : ''">
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Todo</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="app-new-todo">
+    <form class="form-style" [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Todo Title" formControlName="title" [ngClass]=" newTodoForm.get('title').invalid &&
+                   (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ? 'is-invalid' : ''">
 
-      <div *ngIf="newTodoForm.get('title').invalid &&
-                  (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)" class="text-danger">
-        <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
-        <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length 3 symbols.</span>
+        <div *ngIf="newTodoForm.get('title').invalid &&
+                        (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)" class="text-danger">
+          <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
+          <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length 3 symbols.</span>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <textarea class="form-control" 
-                rows="3" 
-                placeholder="Todo Description" 
-                formControlName="description">
-      </textarea>
-    </div>
-
-    <div class="checkPriority">
-      <input type="radio" 
-             class="tr" 
-             name="priority"  
-             formControlName="priority"  
-             value="high">High priority
-      <input type="radio" 
-             class="tr" 
-             name="priority" 
-             formControlName="priority"  
-             value="medium">Medium priority
-      <input type="radio" 
-             class="tr" 
-             formControlName="priority" 
-             name="priority" 
-             value="low">Low priority
-      <div *ngIf="!newTodoForm.get('priority').dirty" class="text-danger prior-danger">
-        <span>Choosing priority is required</span>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" placeholder="Todo Description" formControlName="description">
+            </textarea>
       </div>
-    </div>
-    
 
+      <div class="checkPriority">
+        <input type="radio" class="tr" name="priority" formControlName="priority" value="high">High
+        <input type="radio" class="tr" name="priority" formControlName="priority" value="medium">Medium
+        <input type="radio" class="tr" formControlName="priority" name="priority" value="low">Low
+        <div *ngIf="!newTodoForm.get('priority').dirty" class="text-danger prior-danger">
+          <span>Choosing priority is required</span>
+        </div>
+      </div>
 
-    <footer>
-      <button (click)="onSubmit()" 
-              class="btn btn-primary" 
-              type="submit" 
-              [disabled]="newTodoForm.invalid">Save
-      </button>
-    </footer>
-  </form>
+      <footer>
+        <button class="btn btn-primary" type="submit" [disabled]="newTodoForm.invalid">Save
+        </button>
+      </footer>
+    </form>
+  </div>
 </div>

@@ -1,6 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, Output, Input } from '@angular/core';
+
 import { Todo } from 'src/app/core/interfaces';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { NewTodoComponent } from './new-todo/new-todo.component';
+
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+
+
+
 
 @Component({
   selector: 'app-todos',
@@ -11,9 +21,13 @@ export class TodosComponent implements OnInit {
   toDoList: Array<Todo>;
   search: string;
   priority: string;
+  @Input() modalRef: BsModalRef;
+
+  private unsubscribe = new Subject;
 
   constructor(
-    private todoService: TodoService
+    private todoService: TodoService,
+    private modalService: BsModalService
   ) {
     //  this.toDoList = todos; 
   }
@@ -22,15 +36,34 @@ export class TodosComponent implements OnInit {
     this.getTodos();
   }
 
-  updateTodo(todo: Todo): void {
-    this.todoService.updateTodo(todo)
-    .subscribe(()=>{
-      this.getTodos();
-    });
+  ngOnDestroy():void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 
-  deleteTodo(todoId: number):void {
+  openModal() {
+    this.modalRef = this.modalService.show(NewTodoComponent,
+      Object.assign({}, {
+        ignoreBackdropClick: true,
+        initialState: {
+          submit: this.addTodo.bind(this)
+        }
+      })
+    );
+
+  }
+
+  updateTodo(todo: Todo): void {
+    this.todoService.updateTodo(todo)
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe(() => {
+        this.getTodos();
+      });
+  }
+
+  deleteTodo(todoId: number): void {
     this.todoService.deleteTodo(todoId)
+      .pipe(takeUntil(this.unsubscribe))
       .subscribe(() => {
         this.getTodos();
       });
@@ -38,21 +71,22 @@ export class TodosComponent implements OnInit {
 
   addTodo(todo: Todo): void {
     this.todoService.addTodo(todo)
-    .subscribe(() => {
-      this.getTodos();
-    });
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe(() => {
+        this.getTodos();
+      });
   }
 
   private getTodos(): void {
     this.todoService.getTodos()
-      .subscribe(data =>{
+      .subscribe(data => {
         this.toDoList = data;
         console.log(data)
       },
-      error => {
-        console.error(error);
-      }
-    );
+        error => {
+          console.error(error);
+        }
+      );
   }
 }
 

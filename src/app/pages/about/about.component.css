@@ -1,0 +1,29 @@
+.app-about{
+    display: flex;
+}
+
+nav{
+    padding: 24px 0;
+    border-right: 1px solid #c1c1c1;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    display: block;
+    padding: 12px 24px;
+    color: #c1c1c1;
+}
+
+a:hover{
+    color: #333;
+}
+
+.active a{
+    color: #333;
+}
+

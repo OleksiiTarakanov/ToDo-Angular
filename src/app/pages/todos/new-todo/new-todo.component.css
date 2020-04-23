@@ -28,13 +28,15 @@ footer{
 }
 
 .tr{
-    margin-left: 30px;
+margin-left: 15px; 
 }
 .checkPriority{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 }
 .prior-danger{
     margin-left: 30px;
+    font-size: 12px;
 }
