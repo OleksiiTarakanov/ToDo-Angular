@@ -1,1 +1,16 @@
-<p>user works! {{userId}}</p>
+<div class="row">
+  <div class="col">
+    <div class="card user">
+      <img src={{user.picture}} class="card-img-top photo" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{user.firstname}} {{user.lastname}}</h5>
+        <p class="card-text">Phone: {{user.phone}}
+        </p>
+        <p class="card-text">Email: {{user.email}}
+        </p>
+        <p class="card-text">Description: {{user.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
+
+import { User } from '../../interfaces'
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsersService {
+  private url = 'http://localhost:3000/users';
+
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  getUsers(): Observable<Array<User>> {
+    return this.http.get<Array<User>>(this.url);
+  }
+
+  getUser(userId: number): Observable<User> {
+    return this.http.get<User>(`${this.url}/${userId}`);
+  }
+}

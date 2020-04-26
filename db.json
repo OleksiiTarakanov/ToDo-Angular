@@ -12,55 +12,49 @@
       "description": "JS desc",
       "isDone": true,
       "id": 2,
-      "priority": "high",
-      "priorityClass": ""
+      "priority": "high"
     },
     {
       "title": "SCSS",
       "description": null,
-      "isDone": null,
+      "isDone": false,
       "id": 3,
-      "priority": "medium",
-      "priorityClass": ""
+      "priority": "medium"
     },
     {
       "title": "CSS",
       "description": null,
-      "isDone": true,
+      "isDone": false,
       "id": 4,
-      "priority": "medium",
-      "priorityClass": ""
+      "priority": "medium"
     },
     {
       "title": "JS array",
       "description": null,
       "isDone": null,
       "id": 5,
-      "priority": "medium",
-      "priorityClass": ""
+      "priority": "medium"
     },
     {
-      "title": "TS types",
-      "description": null,
-      "isDone": null,
       "id": 6,
-      "priority": "high",
-      "priorityClass": ""
+      "title": "TS types",
+      "description": "TS types desc",
+      "isDone": null,
+      "priority": "low"
     },
     {
       "title": "123",
       "description": "123",
       "isDone": false,
       "id": 7,
-      "priority": "low",
-      "priorityClass": ""
+      "priority": "low"
     },
     {
       "id": 8,
       "title": "Edited todo",
       "description": "Edited Desc",
       "isDone": false,
-      "priority": "low"
+      "priority": "high"
     },
     {
       "id": 9,
@@ -73,7 +67,39 @@
       "title": "123",
       "description": "321",
       "isDone": false,
-      "priority": "medium"
+      "priority": "high"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Juanita",
+      "lastname": "Burns",
+      "picture": "https://randomuser.me/api/portraits/women/85.jpg",
+      "email": "juanita.burn@example.com",
+      "phone": "(514)-801-8912",
+      "description": "Globally reinvent an expanded array of sources after global internal or 'organic' sources. Compellingly create real-time interfaces via end-to-end methods of empowerment. Efficiently exploit intermandated.",
+      "shortDescription": "Press More Details to read about this user"
+    },
+    {
+      "id": 2,
+      "firstname": "Kim",
+      "lastname": "Bulthuis",
+      "picture": "https://randomuser.me/api/portraits/men/88.jpg",
+      "email": "kim.bulthuis@example.com",
+      "phone": "(499)-496-2078",
+      "description": "Globally reinvent an expanded array of sources after global internal or 'organic' sources. Compellingly create real-time interfaces via end-to-end methods of empowerment. Efficiently exploit intermandated.",
+      "shortDescription": "Press More Details to read about this user"
+    },
+    {
+      "id": 3,
+      "firstname": "Bently",
+      "lastname": "Anderson",
+      "picture": "https://randomuser.me/api/portraits/men/53.jpg",
+      "email": "bently.anderson@example.com",
+      "phone": "690-067-0556",
+      "description": "Globally reinvent an expanded array of sources after global internal or 'organic' sources. Compellingly create real-time interfaces via end-to-end methods of empowerment. Efficiently exploit intermandated.",
+      "shortDescription": "Press More Details to read about this user"
     }
   ]
 }
