@@ -16,10 +16,11 @@ export class HeaderComponent implements OnInit, OnDestroy, OnChanges {
   isLogined = false;
   titleFontSize = '36px';
   dataList = ['Angular','Ts','Scss'];
+  
   constructor() { }
 
   ngOnInit(): void {
-
+    
   }
   ngOnDestroy(): void{
 
